@@ -11,9 +11,9 @@ export default class App extends Component {
         <label>Name:</label>
         <input className="form-control" />
       </div>
-      <dv className="form-group">
+      <div className="form-group">
         <label>City:</label>
         <input className="form-control" />
-      </dv>
+      </div>
     </div>
  }
