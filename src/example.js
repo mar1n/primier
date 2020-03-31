@@ -26,14 +26,13 @@ function sumOdd(values) {
 }
 
 function asyncAdd(values) {
+    return new Promise(callback =>
     setTimeout(() => {
         let total = sumValues(values);
         console.log(`Async Total: ${total}`);
-        return total;
-    }, 500);
+        callback(total);
+    }, 500));
 }
 
 let values = [10, 20, 30, 40, 50];
-let total = asyncAdd(values);
-
-console.log(`Main Total ${total}`);
+asyncAdd(values).then(total => console.log(`Main Total ${total}`));
